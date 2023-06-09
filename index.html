@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    ​﻿
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 100%;
+        height: 100%;
+      }
+      .view_box {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        justify-content: center;
+      }
+      .view_box .addt_box {
+        margin: auto;
+        width: 700px;
+        height: 300px;
+        border: 1px solid lightgray;
+        margin-top: 30px;
+        padding-top: 20px;
+        color: darkgray;
+      }
+      .view_box .addt_box p {
+        font-size: 20px;
+        font-weight: 700;
+        text-indent: 30px;
+        margin-bottom: 30px;
+      }
+      .view_box .addt_box input {
+        width: 200px;
+        border: none;
+        outline: none;
+        text-indent: 10px;
+        font-size: 20px;
+        color: darkgray;
+        font-weight: 7 00;
+      }
+      .view_box .addt_box button {
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: 700;
+        background: transparent;
+        border: 1px solid darkgray;
+        margin: auto;
+      }
+      .button_box {
+        display: flex;
+        margin-left: 0px;
+        justify-content: center;
+      }
+      .button_box button {
+        width: 100px;
+        height: 40px;
+        background-color: transparent;
+        margin-left: 45px;
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .view_box .imgs_url {
+        position: absolute;
+        bottom:-75%;
+        font-size: 10px;
+        font-weight: 700;
+        color: darkgray;
+        display: none;
+      }
+      .list {
+        box-sizing: border-box;
+        margin-top: 10px;
+      }
+      .list li {
+        position: relative;
+        text-align: center;
+        border: 1px solid lightgray;
+        width: 400px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 15px;
+        font-weight: 700;
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+      .list li img {
+        border-radius: 50%;
+        width: 100px;
+        height: 80px;
+        align-self: center;
+      }
+      .list li .textbox {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-self: center;
+        font-size: 14px;
+        width: 40%;
+      }
+      .list li .icon_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .list li i {
+        font-size: 25px;
+        margin-bottom: 15px;
+        order: 0;
+      }
+      .list li em {
+        font-size: 15px;
+        border: 1px solid lightgray;
+        width: 70px;
+        height: 20px;
+        order: 5;
+        color: darkgray;
+        cursor: pointer;
+      }
+      .addt {
+        width: 250px;
+        height: 80px;
+        background-color: transparent;
+        border: 1px solid chartreuse;
+        color: chartreuse;
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .list li i.on {
+        color: red;
+      }
+      .list li i.off {
+        color: blue;
+      }
+      .addt.on + .view_box .addt_box {
+        display: none;
+      }
+      .bg {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="button_box">
+        <button class="dle">명단 삭제</button>
+        <button class="view">명단 보기</button>
+      </p>
+      <button class="addt on">명단 추가 보이기/ 숨기기</button>
+      <div class="view_box">
+        <ul class="list">
+          <li>
+            <img src="./img1.jpg" alt="" />
+            <div class="textbox">
+              <strong>홍길동</strong>
+              <span>웹퍼블리셔</span>
+              <p>010-000-0000</p>
+            </div>
+            <div class="icon_box">
+              <i class="xi-star"></i>
+              <em>퇴사</em>
+            </div>
+          </li>
+        </ul>
+        <div class="addt_box">
+          <p>이름 : <input type="text" name="name" class="names" /></p>
+          <p>직업 : <input type="text" name="jobs" class="jobs" /></p>
+          <p>연락처 : <input type="text" name="calls" class="calls" /></p>
+          <p>사진 : <input type="text" name="imgs" class="imgs" /></p>
+          <button class="input_btn">추가</button>
+        </div>
+        <p class="imgs_url">사진 주소 : <br><strong></strong></p>
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
